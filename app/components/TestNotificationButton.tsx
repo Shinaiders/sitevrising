@@ -26,7 +26,7 @@ export default function TestNotificationButton() {
     setShowResults(true);
   };
 
-  // Teste local (sem Trigger.dev)
+  // Teste local de notificações
   const testLocalNotifications = async () => {
     setIsTestingLocal(true);
     clarity.event('test_local_notifications_clicked');
@@ -199,91 +199,89 @@ export default function TestNotificationButton() {
         </p>
       </div>
 
-      {/* Botões de Teste */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div className="space-y-4">
+        {/* Teste Local */}
         <button
           onClick={testLocalNotifications}
           disabled={isTestingLocal}
-          className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 disabled:from-gray-600 disabled:to-gray-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 disabled:cursor-not-allowed"
+          className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 disabled:from-gray-600 disabled:to-gray-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 disabled:hover:scale-100"
         >
           {isTestingLocal ? (
-            <div className="flex items-center justify-center gap-2">
-              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-              <span className="text-sm">Testando...</span>
-            </div>
+            <span className="flex items-center justify-center">
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Testando...
+            </span>
           ) : (
-            <div className="text-center">
-              <div className="text-lg mb-1">📧</div>
-              <div className="text-sm">Teste Local</div>
-            </div>
+            '📧 Teste Local'
           )}
         </button>
 
+        {/* Teste WhatsApp */}
         <button
           onClick={testWhatsAppWithUsers}
           disabled={isTestingWhatsApp}
-          className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-600 disabled:to-gray-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 disabled:cursor-not-allowed"
+          className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 disabled:from-gray-600 disabled:to-gray-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 disabled:hover:scale-100"
         >
           {isTestingWhatsApp ? (
-            <div className="flex items-center justify-center gap-2">
-              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-              <span className="text-sm">Enviando...</span>
-            </div>
+            <span className="flex items-center justify-center">
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Testando...
+            </span>
           ) : (
-            <div className="text-center">
-              <div className="text-lg mb-1">💬</div>
-              <div className="text-sm">Teste WhatsApp</div>
-              <div className="text-xs opacity-80">c/ usuários</div>
-            </div>
+            '📱 Teste WhatsApp'
           )}
         </button>
 
+        {/* Teste Evolution API */}
         <button
           onClick={testEvolutionAPI}
-          className="bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300"
+          className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
         >
-          <div className="text-center">
-            <div className="text-lg mb-1">⚙️</div>
-            <div className="text-sm">Config API</div>
-          </div>
+          📱 Teste Evolution API
         </button>
       </div>
 
       {/* Resultados dos Testes */}
       {showResults && testResults.length > 0 && (
-        <div className="bg-black/30 border border-gray-500/30 rounded-lg p-4">
-          <div className="flex justify-between items-center mb-3">
-            <h4 className="text-lg font-bold text-gray-300">
+        <div className="mt-6 space-y-3">
+          <div className="flex justify-between items-center">
+            <h4 className="text-lg font-semibold text-purple-300">
               📊 Resultados dos Testes
             </h4>
             <button
               onClick={clearResults}
-              className="text-xs text-gray-400 hover:text-white transition-colors"
+              className="text-xs bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded-md transition-colors duration-200"
             >
-              🗑️ Limpar
+              Limpar
             </button>
           </div>
           
-          <div className="space-y-2 max-h-48 overflow-y-auto">
+          <div className="space-y-2 max-h-60 overflow-y-auto">
             {testResults.map((result, index) => (
               <div
                 key={index}
-                className={`p-3 rounded-lg border ${
-                  result.type === 'success' 
-                    ? 'bg-green-900/20 border-green-500/30 text-green-400' 
+                className={`p-3 rounded-lg border-l-4 ${
+                  result.type === 'success'
+                    ? 'bg-green-900/30 border-green-500 text-green-200'
                     : result.type === 'warning'
-                    ? 'bg-yellow-900/20 border-yellow-500/30 text-yellow-400'
-                    : 'bg-red-900/20 border-red-500/30 text-red-400'
+                    ? 'bg-yellow-900/30 border-yellow-500 text-yellow-200'
+                    : 'bg-red-900/30 border-red-500 text-red-200'
                 }`}
               >
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
-                    <div className="font-semibold text-sm">{result.message}</div>
+                    <p className="font-medium text-sm">{result.message}</p>
                     {result.details && (
-                      <div className="text-xs opacity-80 mt-1">{result.details}</div>
+                      <p className="text-xs opacity-80 mt-1">{result.details}</p>
                     )}
                   </div>
-                  <div className="text-xs opacity-60 ml-2">{result.timestamp}</div>
+                  <span className="text-xs opacity-60 ml-2">{result.timestamp}</span>
                 </div>
               </div>
             ))}
@@ -291,12 +289,12 @@ export default function TestNotificationButton() {
         </div>
       )}
 
-      {/* Informações dos Testes */}
-      <div className="mt-6 text-xs text-gray-400 space-y-1">
-        <div>• <strong>Teste Local:</strong> Envia notificações diretamente via API</div>
-        <div>• <strong>Teste WhatsApp:</strong> Envia mensagens de teste para usuários não notificados</div>
-        <div>• <strong>Config API:</strong> Verifica se a Evolution API está configurada</div>
-        <div>• <strong>Lançamento:</strong> Use o botão vermelho acima para lançar oficialmente</div>
+      {/* Informações */}
+      <div className="mt-4 p-4 bg-blue-900/30 border border-blue-500/50 rounded-lg">
+        <p className="text-xs text-blue-200">
+          💡 <strong>Dica:</strong> Use estes testes para verificar se o sistema de notificações está funcionando corretamente. 
+          O teste local envia notificações diretamente, enquanto o teste WhatsApp verifica a integração com a Evolution API.
+        </p>
       </div>
     </div>
   );
