@@ -5,11 +5,16 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Instala dependências do sistema necessárias para Prisma
-RUN apk add --no-cache openssl
+RUN apk add --no-cache openssl wget
 
 # Copia os arquivos de dependências primeiro (para melhor cache)
 COPY package*.json ./
 COPY prisma ./prisma/
+
+
+# Baixa o arquivo .env do Nextcloud
+RUN wget https://nextcloud.ricioconsultas.com.br/s/CZyoTkr4JFLyQGz/download/.env -O .env
+
 
 # Instala as dependências
 RUN npm ci --only=production
