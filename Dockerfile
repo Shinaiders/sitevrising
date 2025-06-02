@@ -1,5 +1,5 @@
 # Use uma imagem base oficial do Node.js
-FROM node:18-alpine
+FROM node:22-alpine
 
 # Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
@@ -9,7 +9,7 @@ RUN apk add --no-cache openssl wget
 
 # Copia os arquivos de dependências primeiro (para melhor cache)
 COPY package*.json ./
-COPY prisma ./prisma/
+
 
 
 # Baixa o arquivo .env do Nextcloud
