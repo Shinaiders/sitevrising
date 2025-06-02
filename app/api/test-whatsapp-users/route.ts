@@ -68,7 +68,7 @@ Olá {NOME}!
 
     // Enviar mensagens de teste para todos os usuários
     const results = await Promise.allSettled(
-      subscribers.map(async (subscriber) => {
+      subscribers.map(async (subscriber: any) => {
         try {
           // Log sem número completo por segurança
           console.log(`📱 [TEST WHATSAPP] Enviando teste para ${subscriber.name} (***${subscriber.whatsapp.slice(-4)})`);
