@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦇 V Rising Brasil - Site Oficial 🏰
 
-## Getting Started
+Site oficial para divulgação dos servidores brasileiros de V Rising, desenvolvido com Next.js 15 e Tailwind CSS.
 
-First, run the development server:
+## 🎮 Sobre o Projeto
 
+Este site foi criado para divulgar e promover os servidores brasileiros de V Rising, oferecendo:
+
+- **Cronômetro de lançamento** para o dia 6 de junho de 2024
+- **Informações detalhadas** dos servidores PVP e PVE
+- **Design temático vampírico** com animações e efeitos visuais
+- **Call-to-action** para entrada no Discord da comunidade
+- **Responsivo** para todos os dispositivos
+
+## 🚀 Tecnologias Utilizadas
+
+- **Next.js 15** - Framework React
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS 4** - Estilização
+- **React Hooks** - Gerenciamento de estado
+- **Google Fonts** - Fontes personalizadas (Inter, Creepster, Nosifer)
+
+## 🎯 Funcionalidades
+
+### ⏰ Cronômetro de Lançamento
+- Contagem regressiva em tempo real
+- Atualização automática a cada segundo
+- Display de dias, horas, minutos e segundos
+
+### 🎮 Servidores
+- **Servidor PVP**: Configurações para batalhas intensas
+- **Servidor PVE**: Ambiente cooperativo para exploração
+
+### 🎨 Design
+- Tema vampírico com cores vermelhas e pretas
+- Animações CSS personalizadas
+- Efeitos de hover e transições suaves
+- Gradientes e efeitos de vidro (glass effect)
+
+## 📋 Configurações dos Servidores
+
+### 🔥 Servidor PVP
+- **Modo**: PvP Intenso
+- **Dificuldade**: Normal
+- **Proteção PvP**: Longa
+- **Máx. Clã**: 4 jogadores
+- **Horários de Conflito**: 20h00 - 23h00
+- **Loot**: 2x | **Crafting**: 1x
+
+### 🛡️ Servidor PVE
+- **Modo**: PvE Cooperativo
+- **PvP**: Desabilitado
+- **Máx. Clã**: 6 jogadores
+- **Waypoint Global**: Desbloqueado
+- **Loot**: 3x | **Crafting**: 1.5x
+
+## 🛠️ Como Executar
+
+### Pré-requisitos
+- Node.js 18+ 
+- npm ou yarn
+
+### Instalação
 ```bash
+# Clone o repositório
+git clone [url-do-repositorio]
+
+# Entre na pasta do projeto
+cd sitevrising
+
+# Instale as dependências
+npm install
+
+# Execute em modo de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O site estará disponível em `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build para Produção
+```bash
+# Gerar build de produção
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Executar em produção
+npm start
+```
 
-## Learn More
+## 📁 Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+```
+sitevrising/
+├── app/
+│   ├── components/
+│   │   └── ServerCard.tsx     # Componente dos cards de servidor
+│   ├── globals.css            # Estilos globais e animações
+│   ├── layout.tsx             # Layout principal com metadados
+│   └── page.tsx               # Página principal
+├── public/                    # Assets estáticos
+├── package.json
+└── README.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Customizações CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O projeto inclui várias classes CSS personalizadas:
 
-## Deploy on Vercel
+- **Animações**: `animate-pulse-red`, `animate-float`, `animate-blood-drip`
+- **Fontes**: `font-creepster`, `font-nosifer`, `font-inter`
+- **Efeitos**: `glass-effect`, `hover-glow`, `gradient-text`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Responsividade
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O site é totalmente responsivo, adaptando-se a:
+- 📱 Dispositivos móveis (320px+)
+- 📱 Tablets (768px+)
+- 💻 Desktops (1024px+)
+- 🖥️ Telas grandes (1440px+)
+
+## 🔧 Configurações Avançadas
+
+### Metadados SEO
+- Título otimizado para SEO
+- Descrição detalhada
+- Open Graph para redes sociais
+- Twitter Cards
+- Palavras-chave relevantes
+
+### Performance
+- Fontes otimizadas com preconnect
+- Imagens otimizadas
+- CSS minificado
+- JavaScript otimizado
+
+## 🤝 Contribuição
+
+Para contribuir com o projeto:
+
+1. Faça um fork do repositório
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 📞 Contato
+
+- **Discord**: [Link do Discord da Comunidade]
+- **Email**: [email-do-servidor]
+
+---
+
+**🦇 Desperte seu vampiro interior! 🦇**
+
+*Feito com ❤️ para a comunidade brasileira de V Rising*
