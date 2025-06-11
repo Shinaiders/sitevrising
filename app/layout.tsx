@@ -3,8 +3,8 @@ import "./globals.css";
 import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
-  title: "UMBRELLIX - Servidor Brasileiro de V Rising | Lançamento 6 de Junho às 19h",
-  description: "Junte-se ao UMBRELLIX, o melhor servidor brasileiro de V Rising! Servidores PVP e PVE com baixa latência, comunidade ativa e eventos especiais. Lançamento em 6 de junho de 2024 às 19:00!",
+  title: "UMBRELLIX - Servidor Brasileiro de V Rising | Lançamento 13 de Junho às 19h",
+  description: "Junte-se ao UMBRELLIX, o melhor servidor brasileiro de V Rising! Servidores PVP e PVE com baixa latência, comunidade ativa e eventos especiais. Lançamento em 13 de junho de 2025 às 19:00!",
   keywords: "UMBRELLIX, V Rising, servidor brasileiro, PVP, PVE, vampiro, MMO, survival, Brasil",
   authors: [{ name: "UMBRELLIX" }],
   openGraph: {

@@ -6,7 +6,7 @@ Site oficial para divulgação dos servidores brasileiros de V Rising, desenvolv
 
 Este site foi criado para divulgar e promover os servidores brasileiros de V Rising, oferecendo:
 
-- **Cronômetro de lançamento** para o dia 6 de junho de 2024
+- **Cronômetro de lançamento** para o dia 13 de junho de 2025
 - **Informações detalhadas** dos servidores PVP e PVE
 - **Design temático vampírico** com animações e efeitos visuais
 - **Call-to-action** para entrada no Discord da comunidade

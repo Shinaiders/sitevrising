@@ -62,7 +62,7 @@ NEXTAUTH_URL="https://seudominio.com"
 ```javascript
 // Em app/page.tsx, linha ~25
 // TROCAR PARA DATA REAL DO LANÇAMENTO:
-const launchDate = new Date('2024-12-25T19:00:00'); // Natal às 19h
+const launchDate = new Date('2025-06-13T19:00:00'); // 13 de Junho às 19h
 // REMOVER A LINHA DE TESTE:
 // const launchDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000));
 ```

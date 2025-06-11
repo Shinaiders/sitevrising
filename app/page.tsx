@@ -21,8 +21,8 @@ export default function Home() {
     // Registrar que o usuário visualizou a página
     clarity.event('homepage_viewed');
     
-    // Data oficial do lançamento: 06 de Junho de 2025
-    const launchDate = new Date('2025-06-06T19:00:00-03:00'); // 19h horário de Brasília
+      // Data oficial do lançamento: 13 de Junho de 2025
+  const launchDate = new Date('2025-06-13T19:00:00-03:00'); // 19h horário de Brasília
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
