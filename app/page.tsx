@@ -197,7 +197,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-lg text-red-200">
-                📅 <strong>06 de Junho de 2025 às 19h</strong> - Prepare-se para a batalha!
+                📅 <strong>13 de Junho de 2025 às 19h</strong> - Prepare-se para a batalha!
               </p>
             </>
           )}
